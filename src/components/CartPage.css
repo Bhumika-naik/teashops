@@ -1,64 +1,146 @@
-.quantity-btn-container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* General page styling */
+.cart-page {
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  max-width: 1100px;
+  margin: 40px auto;
+  background-color: #f9f9f9; /* Light background for the entire page */
+  border-radius: 10px; /* Rounded corners for the page container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the container */
 }
 
-.quantity-btn {
-  width: 50px;  /* Width of the button */
-  height: 50px; /* Height of the button */
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  font-size: 18px;  /* Adjust font size for the arrows */
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack the arrow and quantity vertically */
+/* Heading Style */
+h2 {
   text-align: center;
-  padding: 5px;
-}
-
-.quantity-btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.arrow {
-  font-size: 20px;
-  margin: 2px 0; /* Adjust space between arrows and quantity */
-}
-
-.quantity {
-  font-size: 16px;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
-.remove-btn {
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-  border: none;
-}
-
-.checkout-btn {
-  background-color: green;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-  margin-top: 20px;
-}
-
+/* Table Styles */
 .cart-table {
   width: 100%;
-  margin-bottom: 20px;
   border-collapse: collapse;
+  margin-bottom: 30px;
+  border: 1px solid #1f1d1d54; /* Light border around the table */
+  border-radius: 10px;
+  background-color: white; /* White background for the table */
+  overflow: hidden; /* Ensure the rounded corners are respected */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for the table */
 }
 
 .cart-table th, .cart-table td {
-  padding: 10px;
+  padding: 15px 20px;
   text-align: left;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+  background-color: #f4f4f4;
+  color: #0f0f0f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cart-table td {
+  font-size: 14px;
+  color: #555;
+}
+
+.cart-table tr:hover {
+  background-color: #f2f2f2; /* Slightly darker on hover */
+}
+
+/* Quantity input styling */
+.quantity-container {
+  display: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-box {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.quantity-box:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff0000;
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 30px auto; /* Center the button horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Total amount styling */
+h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .cart-table th, .cart-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .quantity-box {
+    width: 45px;
+    font-size: 14px;
+  }
+
+  .checkout-btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    width: 80%; /* Make the button larger on smaller screens */
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }

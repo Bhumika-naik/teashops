@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { useNavigate } from 'react-router-dom';
 import './CartPage.css';  // Import the CSS file
 
@@ -20,13 +20,11 @@ const CartPage = () => {
     setTotalAmount(total);
   };
 
-  // Handle quantity changes: increase or decrease
-  const handleQuantityChange = (index, action) => {
+  // Handle manual input change for quantity
+  const handleManualQuantityChange = (index, value) => {
     const updatedCart = [...cartItems];
-    if (action === 'increase') {
-      updatedCart[index].quantity += 1; // No limit on increase
-    } else if (action === 'decrease' && updatedCart[index].quantity > 1) {
-      updatedCart[index].quantity -= 1;
+    if (value > 0) {
+      updatedCart[index].quantity = parseInt(value);
     }
     setCartItems(updatedCart);
     updateTotalAmount(updatedCart);
@@ -64,14 +62,13 @@ const CartPage = () => {
               <td>{item.name}</td>
               <td>
                 <div className="quantity-container">
-                  <button
-                    className="diamond-btn"
-                    onClick={() => handleQuantityChange(index, 'increase')}
-                  >
-                    <span className="diamond-top">&#x25B2;</span> {/* Custom up arrow (▲) */}
-                    <span className="quantity">{item.quantity}</span>
-                    <span className="diamond-bottom">&#x25BC;</span> {/* Custom down arrow (▼) */}
-                  </button>
+                  <input
+                    type="number"
+                    value={item.quantity}
+                    onChange={(e) => handleManualQuantityChange(index, e.target.value)}
+                    className="quantity-box"
+                    min="1"
+                  />
                 </div>
               </td>
               <td>${(item.price * item.quantity).toFixed(2)}</td>
