@@ -1,0 +1,53 @@
+/* PaymentSuccess.css */
+.payment-success {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    max-width: 400px; /* Adjusted width */
+    width: 100%; /* Make it responsive */
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #27ae60;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+  }
+  
+  .success-message {
+    font-size: 20px;
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 15px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2ecc71;
+  }
+  
+  button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+  }
+  

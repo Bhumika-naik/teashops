@@ -1,0 +1,85 @@
+/* CustomerDetails.css */
+.customer-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9; /* Light background color */
+  }
+  
+  .customer-details-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(12, 77, 218, 0.397);
+    width: 100%;
+    max-width: 500px; /* Set a maximum width */
+    margin: 20px;
+  }
+  
+  .customer-details-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  input:focus, select:focus {
+    border-color: #3498db; /* Focus color */
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .customer-details-box {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .customer-details-box h2 {
+      font-size: 20px;
+    }
+  
+    label, input, select, button {
+      font-size: 14px;
+    }
+  }
+  

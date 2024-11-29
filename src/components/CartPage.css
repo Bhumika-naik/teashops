@@ -1,0 +1,64 @@
+.quantity-btn-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-btn {
+  width: 50px;  /* Width of the button */
+  height: 50px; /* Height of the button */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  font-size: 18px;  /* Adjust font size for the arrows */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack the arrow and quantity vertically */
+  text-align: center;
+  padding: 5px;
+}
+
+.quantity-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.arrow {
+  font-size: 20px;
+  margin: 2px 0; /* Adjust space between arrows and quantity */
+}
+
+.quantity {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.checkout-btn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+
+.cart-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
